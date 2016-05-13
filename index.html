@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <meta charset="UTF-8">
     <title>#winning</title>
   </head>
   <body>
     <div id="board">
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -22,7 +23,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -36,7 +37,7 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -50,7 +51,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -64,7 +65,7 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -78,7 +79,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -92,7 +93,7 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -106,7 +107,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -120,7 +121,7 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -134,7 +135,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -148,7 +149,7 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="black"></div>
         <div class="white"></div>
         <div class="black"></div>
@@ -162,7 +163,7 @@
         <div class="black"></div>
         <div class="white"></div>
       </div>
-      <div class="row">
+      <div class="row" >
         <div class="white"></div>
         <div class="black"></div>
         <div class="white"></div>
@@ -176,6 +177,53 @@
         <div class="white"></div>
         <div class="black"></div>
       </div>
+      <button type="button" id="button">Change the colors!!!!!</button>
     </div>
   </body>
+  <script>
+    
+    $(".row div").mouseover(function() {
+      if ($(this).hasClass("black")) {
+        $(this).addClass("green");
+      }
+      else {
+        $(this).addClass("blue");
+      }
+    });
+    
+    $(".row div").mouseout(function() {
+      if ($(this).hasClass("green")) {
+        $(this).removeClass("green");
+      }
+      if ($(this).hasClass("blue")) {
+        $(this).removeClass("blue");
+      }
+    });
+    
+  //   $(".blue").on("click", function(){
+  //       $(this).removeClass("blue").addClass("white");
+  //       console.log(1);
+  // });
+  
+    // $("#name").on("click", ".blue" , function() {
+    //   $(".blue").removeClass("blue").addClass("white");
+    // });
+    
+    // $(".white").hover(function() {
+    //   $(this).toggleClass("blue");
+    // });
+  
+    // $(".white").mouseover(function(){
+    //     $(this).removeClass("white").addClass("blue");
+    // });
+  
+  function switchTheseHoes() {
+    $(".black").addClass("red");
+    $(".white").addClass("black").removeClass("white");
+    $(".red").removeClass("black").addClass("white").removeClass("red");
+  };
+  
+  $("#button").click(switchTheseHoes);
+  
+  </script>
 </html>

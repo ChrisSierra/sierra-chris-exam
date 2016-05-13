@@ -23,6 +23,10 @@ time, mark, audio, video {
 	text-decoration: none;
 }
 
+body {
+	background-color: yellow;
+}
+
 #board {
 	height: 100em;
 	width: 100em;
@@ -48,12 +52,18 @@ time, mark, audio, video {
 	background-color: black;
 }
 
+.blue {
+	background-color: blue;
+}
+
 .black:hover {
 	background-color: green;
 }
 
-.white:hover {
-	background-color: blue;
+#button{
+	width: 10%;
+	font-size: 3em;
+	margin-bottom: 10em;
+	background-color: red;
 }
-
 
